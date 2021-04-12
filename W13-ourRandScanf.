@@ -1,0 +1,34 @@
+/*
+    Name: Paul Talaga
+    Date: Mar 28, 2020
+    Desc: Pointer demo
+*/
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+#include <time.h>     // Enables use of time()
+
+void getRand(int* val){
+    *val = rand() % 10;
+}
+
+int main(){
+   
+    srand(time(0));
+    int a = 0;
+    int* b = NULL;
+    b = &a;
+    
+    printf("a: %d \n", a);
+    
+    *b = 10;
+    
+    printf("a: %d \n", a);
+    
+    getRand(&a);
+    
+    printf("a: %d \n", a);
+    
+    return 0;
+}
